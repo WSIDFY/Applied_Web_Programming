@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+ <html lang="ko">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>SPA 예제</title>
+ <!--Single-page app lifecycle 방식을 이용한 페이지지-->
+ <link rel="stylesheet" href="styles.css">
+ </head>
+ <body>
+ <nav>
+ <a href="#" onclick="navigate('home')">Home</a> <!--메인 페이지-->
+ <a href="#" onclick="navigate('about')">About</a> <!--소개 페이지-->
+ <a href="#" onclick="navigate('contact')">Contact</a> <!--연락처처 페이지-->
+ </nav>
+ <div id="app">
+ <h2>Welcome to SPA</h2>
+ <p>여기에 페이지 내용이 표시됩니다.</p> <!--페이지 내용용-->
+ </div>
+ <script src="app.js"></script>
+ </body>
+ </html>
