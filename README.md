@@ -2,7 +2,7 @@
 <br>
 
 ### - index.html 파일은 매주 최신화됩니다.
-### - 링크 주소 :
+### - 링크 주소 :  https://wsidfy.github.io/Applied_Web_Programming/
 <br>
 
 #### (안내사항)
