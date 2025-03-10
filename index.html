@@ -1,32 +1,85 @@
-
 <!DOCTYPE html>
-<html>
-    <!--============================== 웹 페이지 이름 지정 ==============================-->
+<html lang="ko">
 <head>
-    <title>웹 프로그래밍 응용 과제 종합 페이지</title>     
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주차별 과제 정리</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .week {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .week h2 {
+            color: #007bff;
+        }
+        footer {
+            background: #343a40;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <!--============================== 주차 ==============================-->
-    <h1>주차별 정리</h1>
-    
-    <!--============================== 앵커로 연결되어있는 과제 목차 서술 ==============================-->
-    <h2><b>목차</b></h2>          
-        <ul>
-            <li><a href="#1week">1week</a></li>
-        </ul>
 
+<header>
+    📌 주차별 과제 정리 페이지
+</header>
+
+<h2><b>목차</b></h2>   
+        
+    <a href="#1week">1week</a>
+        
     
-    <!--============================== 과제별 하이퍼링크 모음 ==============================-->
-    <h2 id = "1week"><b>1week</b></h2>
-    <ul>
-        <li><a href="https://wsidfy.github.io/Applied_Web_Programming/1week/SPA/index.html" target="_blank">SPA실습 페이지로 이동</a></b><br>
-        <li><a href="https://wsidfy.github.io/Applied_Web_Programming/1week/MPA/index.html" target="_blank">MPA실습 페이지로 이동</a></b><br>
+<div class="container">
+    <div class="week">
+        <h2>📅 1주차</h2>
+        <p><b>과제내용 : SPA, MPA, JSX 및 REACT 초기설정 및 시작</b></p>
+        <ul>
+        <li><a href="https://wsidfy.github.io/Applied_Web_Programming/1week/SPA/index.html" target="_blank">SPA실습 페이지로 이동</a><br><br>
+        <li><a href="https://wsidfy.github.io/Applied_Web_Programming/1week/MPA/index.html" target="_blank">MPA실습 페이지로 이동</a><br><br>
         <li><a href="https://wsidfy.github.io/Applied_Web_Programming/1week/JSX_coding/index.html" target="_blank">JSX실습 페이지로 이동</a>
-            <br><a href="https://github.com/WSIDFY/Applied_Web_Programming/tree/main/1week/JSX_coding" target="_blank">(JSX실습 레포지토리로 이동)</a></b><br>
-        <li><a href="https://wsidfy.github.io/Applied_Web_Programming/1week/ReactProject/index.html" target="_blank">React 프로젝트 입니다</a>
-            <br><a href="https://github.com/WSIDFY/Applied_Web_Programming/tree/main/1week/ReactProject" target="_blank">(React프로젝트 레포지토리로 이동)</a></b>
+            <br>접속 불가시 > <a href="https://github.com/WSIDFY/Applied_Web_Programming/tree/main/1week/JSX_coding" target="_blank">(JSX실습 레포지토리로 이동)</a><br><br>
+        <li><a href="https://wsidfy.github.io/Applied_Web_Programming/1week/ReactProject/index.html" target="_blank">React 프로젝트로 이동</a>
+            <br>접속 불가시 > <a href="https://github.com/WSIDFY/Applied_Web_Programming/tree/main/1week/ReactProject" target="_blank">(React프로젝트 레포지토리로 이동)</a>
     </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="week">
+        <h2>📅 2주차</h2>
+        <p><b>과제내용</b> : 미정</p>
+        <ul>
+        <li><b>미정</b><br>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    This page was created based on 2025/03/10.
+</footer>
 
 </body>
-
 </html>
