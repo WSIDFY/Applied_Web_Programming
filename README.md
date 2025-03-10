@@ -1,9 +1,10 @@
 # 주차별 과제 종합 레포지토리입니다.
-<p><b>과목명 : 웹 프로그래밍 응용</b></p>
+<p>과목명 : 웹 프로그래밍 응용</p>
 
-### - 링크 주소 :  https://wsidfy.github.io/Applied_Web_Programming/
-<br>
+## 과제 종합 페이지 링크
+- https://wsidfy.github.io/Applied_Web_Programming/
 
-#### (안내사항)
-- 해당 Repositoriy의 index.html 파일은 매주 최신화됩니다.
-- 기타 안내사항은 추후 추가될 예정입니다.
+## Info
+- 본 레포지토리는 '웹 프로그래밍 응용'교과목의 주차별 과제를 정리하고 업로드 해두는 공간입니다.
+- 해당 레포지토리의 index.html 파일은 매주 최신화됩니다.
+- 기타 안내사항은 추후 추가 될 예정입니다.
