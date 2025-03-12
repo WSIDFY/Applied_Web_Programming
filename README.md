@@ -4,7 +4,7 @@
 ## 과제 종합 페이지 링크
 - https://wsidfy.github.io/Applied_Web_Programming/
 
-<img src="index.png" height="500px" width="750px">
+<img src="index.png" height="400px" width="650px">
 
 
 ## Info
