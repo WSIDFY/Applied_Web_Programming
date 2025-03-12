@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* 공통 배경 및 레이아웃 */
+  body {
+    background-color: #333e51;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 800px;
+    background: #ced5df;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* 프로필 */
+  .profile {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: left;
+    text-align: left;
+    padding: 20px;
+    gap: 20px;
+    justify-content: left;
+  }
+  .profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  .info {
+    text-align: left;
+  }
+  .info h2 {
+    color: #333;
+  }
+  .info p {
+    color: #777;
+    margin: 5px 0;
+  }
+  
+  /* LINKS (contact) */
+  #contact a {
+    color: black;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 2px 8px 2px 0;
+    text-decoration: none;
+  }
+  #contact a:hover {
+    background-color: #2f2f2f;
+    color: rgb(255, 153, 0);
+    text-decoration: none;
+    padding: 2px 8px;
+    transition: padding 0.2s;
+    font-weight: bold;
+  }
+  
+  /* section-title */
+  .section-title {
+    font-size: 17px;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: inline-block;
+  }
+  
+  /* WORKS & SKILLS */
+  .works,
+  .skills {
+    padding: 20px;
+  }
+  
+  /* skills */
+  .skills span {
+    display: inline-block;
+    background: #e9ecef;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  
+  /* 반응형 요소 추가 (모바일) */
+  @media (max-width: 600px) {
+    .profile {
+      flex-direction: column;
+    }
+    .info {
+      text-align: center;
+    }
+     /* 이미지 중앙 정렬 */
+  .profile img {
+    display: block;
+    margin: 0 auto;
+  }
+    
+  }
+  

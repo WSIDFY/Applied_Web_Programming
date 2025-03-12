@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profil_Page_JS_Only</title>
+</head>
+<body>
+<script>
+  // <style> 태그를 생성하여 CSS요소소 추가
+  const style = document.createElement('style');
+
+  style.textContent = `
+    /* 공통 초기화 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    /* 공통 배경 및 레이아웃 */
+    body {
+      background-color: #333e51;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    .container {
+      width: 90%;
+      max-width: 800px;
+      background: #ced5df;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    /* 프로필 섹션 */
+    .profile {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: left;
+      text-align: left;
+      padding: 20px;
+      gap: 20px;
+      justify-content: left;
+    }
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+    .info {
+      text-align: left;
+    }
+    .info h2 {
+      color: #333;
+    }
+    .info p {
+      color: #777;
+      margin: 5px 0;
+    }
+    /* LINKS (contact) */
+    #contact a {
+      color: black;
+      display: inline-block;
+      border-radius: 4px;
+      padding: 2px 8px 2px 0;
+      text-decoration: none;
+    }
+    #contact a:hover {
+      background-color: #2f2f2f;
+      color: rgb(255, 153, 0);
+      text-decoration: none;
+      padding: 2px 8px;
+      transition: padding 0.2s;
+      font-weight: bold;
+    }
+    /* section-title */
+    .section-title {
+      font-size: 17px;
+      background-color: black;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 15px;
+      display: inline-block;
+    }
+    /* WORKS & SKILLS */
+    .works,
+    .skills {
+      padding: 20px;
+    }
+    /* skills */
+    .skills span {
+      display: inline-block;
+      background: #e9ecef;
+      padding: 8px 12px;
+      margin: 5px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 15px;
+    }
+    /* 반응형 (모바일) */
+    @media (max-width: 600px) {
+      .profile {
+        flex-direction: column;
+      }
+      .info {
+        text-align: center;
+      }
+    /* 중앙 정렬 추가 */
+    .profile img {
+      display: block;
+      margin: 0 auto;
+    }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // DOM 요소를 모두 자바스크립트로 생성
+  document.addEventListener('DOMContentLoaded', () => {
+    // body 참조
+    const body = document.body;
+
+    // 첫 번째 container 시작 ================================================================================
+    const container1 = document.createElement('div');
+    container1.classList.add('container');
+
+    // profile
+    const profileDiv = document.createElement('div');
+    profileDiv.classList.add('profile');
+
+    const img = document.createElement('img');
+    img.src = 'profil.jpg'; // 프로필 이미지 경로
+    img.alt = 'Profile Image';
+
+    const infoDiv = document.createElement('div');
+    infoDiv.classList.add('info');
+
+    const h2Name = document.createElement('h2');
+    h2Name.textContent = 'Kim Min Jae';
+
+    const pRole = document.createElement('p');
+    pRole.textContent = 'Student';
+
+    const pLocation = document.createElement('p');
+    pLocation.textContent = '📍Busan';
+
+    // info 안에 추가
+    infoDiv.append(h2Name, pRole, pLocation);
+
+    // profile 안에 추가
+    profileDiv.append(img, infoDiv);
+
+    // hr
+    const hr = document.createElement('hr');
+
+    // works (Links 요소)
+    const worksDiv1 = document.createElement('div');
+    worksDiv1.classList.add('works');
+
+    const worksH3_1 = document.createElement('h3');
+    worksH3_1.textContent = 'Links';
+
+    const contactDiv = document.createElement('div');
+    contactDiv.id = 'contact';
+
+    // Tistory 링크
+    const tistoryA = document.createElement('a');
+    tistoryA.href = 'https://qmffjr2001.tistory.com';
+    tistoryA.target = '_blank';
+    tistoryA.textContent = 'Tistory';
+
+    const tistoryB = document.createElement('b');
+    tistoryB.textContent = '(Click!)';
+
+    // 개행
+    const br1 = document.createElement('br');
+
+    // GitHub 링크
+    const githubA = document.createElement('a');
+    githubA.href = 'https://github.com/WSIDFY';
+    githubA.target = '_blank';
+    githubA.textContent = 'GitHub';
+
+    const githubB = document.createElement('b');
+    githubB.textContent = '(Click!)';
+
+    const br2 = document.createElement('br');
+
+    contactDiv.append(tistoryA, tistoryB, br1, githubA, githubB, br2);
+
+    worksDiv1.append(worksH3_1, contactDiv);
+
+    // works (Education 요소)
+    const worksDiv2 = document.createElement('div');
+    worksDiv2.classList.add('works');
+
+    const worksH3_2 = document.createElement('h3');
+    worksH3_2.textContent = 'Education';
+
+    const eduP = document.createElement('p');
+    eduP.textContent = 'Kyungsung University - Software Engineering';
+
+    worksDiv2.append(worksH3_2, eduP);
+
+    // container1으로로 모으기
+    container1.append(profileDiv, hr, worksDiv1, worksDiv2);
+
+    // 여기까지 container1 ================================================================================
+
+
+
+    // 두 번째 container 시작 ==============================================================================
+    const container2 = document.createElement('div');
+    container2.classList.add('container');
+
+    // #ABOUT
+    const aboutH3 = document.createElement('h3');
+    aboutH3.classList.add('section-title');
+    aboutH3.textContent = '#ABOUT';
+
+    const br3 = document.createElement('br');
+    const br4 = document.createElement('br');
+
+    const aboutP = document.createElement('p');
+    // 여러 줄을 한 번에 표시하기 위한 innerHTML 사용
+    aboutP.innerHTML = `"I am a fourth-year university student majoring in Software Engineering!<br/>
+    On this page, you can find a brief profile about me.<br/>
+    Thank you:D"`;
+
+    const br5 = document.createElement('br');
+    const br6 = document.createElement('br');
+
+    // #SKILLS
+    const skillsH3 = document.createElement('h3');
+    skillsH3.classList.add('section-title');
+    skillsH3.textContent = '#SKILLS';
+
+    const skillsDiv = document.createElement('div');
+    skillsDiv.classList.add('skills');
+
+    const skillList = ['HTML5', 'Python', 'CSS3', 'figma', 'Powerpoint(MS)'];
+    skillList.forEach(skill => {
+      const span = document.createElement('span');
+      span.textContent = skill;
+      skillsDiv.appendChild(span);
+    });
+
+    const br7 = document.createElement('br');
+
+    // #Work Experience
+    const workExpH3 = document.createElement('h3');
+    workExpH3.classList.add('section-title');
+    workExpH3.textContent = '#Work Experience';
+
+    const br8 = document.createElement('br');
+    const br9 = document.createElement('br');
+
+    const workExpP = document.createElement('p');
+    const strong1 = document.createElement('strong');
+    strong1.textContent = 'Zeroweb (2024.09 - 2025.02)';
+    workExpP.appendChild(strong1);
+
+    const workSpan = document.createElement('span');
+    workSpan.textContent = 'Web/Mobile Website Planning and Maintenance';
+
+    const br10 = document.createElement('br');
+    const br11 = document.createElement('br');
+    const br12 = document.createElement('br');
+
+    // #Activity History
+    const activityH3 = document.createElement('h3');
+    activityH3.classList.add('section-title');
+    activityH3.textContent = '#Activity History';
+
+    const br13 = document.createElement('br');
+    const br14 = document.createElement('br');
+
+    const activityP = document.createElement('p');
+    const strong2 = document.createElement('strong');
+    strong2.innerHTML = `(LG) - LG Aimers 4th (2023.08 - 2024.03)<br/>
+    (KITRI) - White Hat School 1st (2024.01 - 2024.02)`;
+
+    activityP.appendChild(strong2);
+
+    const br15 = document.createElement('br');
+    const br16 = document.createElement('br');
+
+    // container2에 추가
+    container2.append(
+      aboutH3, br3, br4, aboutP, br5, br6,
+      skillsH3, skillsDiv, br7,
+      workExpH3, br8, br9, workExpP, workSpan, br10, br11, br12,
+      activityH3, br13, br14, activityP, br15, br16
+    );
+    // 여기까지 container2 ================================================================================
+
+    // Body에 추가
+    body.append(container1, container2);
+  });
+</script>
+</body>
+</html>
