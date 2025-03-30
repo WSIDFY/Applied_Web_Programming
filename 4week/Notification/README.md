@@ -1,4 +1,4 @@
-# Notification실습 /
+# Notification실습
 
 - 미리 정의한 알림 메시지를 순차적으로 출력하고 정리합니다.
 
