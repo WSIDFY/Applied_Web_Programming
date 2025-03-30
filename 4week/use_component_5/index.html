@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Profil_Page_use_component_10</title>
+    <!-- 스타일 정의 -->
+    <style>
+      /* 공통 초기화 */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+      /* 공통 배경 및 레이아웃 */
+      body {
+        background-color: #333e51;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+      .container {
+        width: 90%;
+        max-width: 800px;
+        background: #ced5df;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      /* 프로필 섹션 */
+      .profile {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        text-align: left;
+        padding: 20px;
+        gap: 20px;
+        justify-content: flex-start;
+      }
+      .profile img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+      }
+      .info {
+        text-align: left;
+      }
+      .info h2 {
+        color: #333;
+      }
+      .info p {
+        color: #777;
+        margin: 5px 0;
+      }
+      /* LINKS (contact) */
+      #contact a {
+        color: black;
+        display: inline-block;
+        border-radius: 4px;
+        padding: 2px 8px 2px 0;
+        text-decoration: none;
+      }
+      #contact a:hover {
+        background-color: #2f2f2f;
+        color: rgb(255, 153, 0);
+        text-decoration: none;
+        padding: 2px 8px;
+        transition: padding 0.2s;
+        font-weight: bold;
+      }
+      /* section-title */
+      .section-title {
+        font-size: 17px;
+        background-color: black;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 15px;
+        display: inline-block;
+      }
+      /* WORKS & SKILLS */
+      .works,
+      .skills {
+        padding: 20px;
+      }
+      /* skills */
+      .skills span {
+        display: inline-block;
+        background: #e9ecef;
+        padding: 8px 12px;
+        margin: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 15px;
+      }
+      /* 반응형 (모바일) */
+      @media (max-width: 600px) {
+        .profile {
+          flex-direction: column;
+        }
+        .info {
+          text-align: center;
+        }
+      }
+    </style>
+    <!-- React 및 ReactDOM CDN -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/javascript">
+      // LinkItem 컴포넌트: 최소 2개 이상의 props (url, label, extra)를 전달받습니다.
+      function LinkItem({ url, label, extra, target="_blank" }) {
+        return (
+          <a href={url} target={target}>
+            {label} <b>{extra}</b>
+          </a>
+        );
+      }
+
+      // Profile 컴포넌트: 프로필 이미지, 이름, 역할, 위치 표시
+      function Profile() {
+        return (
+          <div className="profile">
+            <img src="profil.jpg" alt="Profile Image" />
+            <div className="info">
+              <h2>Kim Min Jae</h2>
+              <p>Student</p>
+              <p>📍Busan</p>
+            </div>
+          </div>
+        );
+      }
+
+      // Links 컴포넌트: 링크(Links) 섹션 구성
+      function Links() {
+        return (
+          <div className="works">
+            <h3>Links</h3>
+            <div id="contact">
+              <LinkItem url="https://qmffjr2001.tistory.com" label="Tistory" extra="(Click!)" />
+              <br />
+              <LinkItem url="https://github.com/WSIDFY" label="GitHub" extra="(Click!)" />
+              <br />
+            </div>
+          </div>
+        );
+      }
+
+      // Education 컴포넌트: 교육 정보 표시
+      function Education() {
+        return (
+          <div className="works">
+            <h3>Education</h3>
+            <p>Kyungsung University - Software Engineering</p>
+          </div>
+        );
+      }
+
+      // About 컴포넌트: 소개 섹션 구성
+      function About() {
+        return (
+          <div>
+            <h3 className="section-title">#ABOUT</h3>
+            <p>
+              "I am a fourth-year university student majoring in Software Engineering!<br/>
+              On this page, you can find a brief profile about me.<br/>
+              Thank you:D"
+            </p>
+          </div>
+        );
+      }
+
+      // Skills 컴포넌트: 보유 기술 나열
+      function Skills() {
+        const skillList = ['HTML5', 'Python', 'CSS3', 'figma', 'Powerpoint(MS)'];
+        return (
+          <div>
+            <h3 className="section-title">#SKILLS</h3>
+            <div className="skills">
+              {skillList.map((skill, index) => (
+                <span key={index}>{skill}</span>
+              ))}
+            </div>
+          </div>
+        );
+      }
+
+      // WorkExperience 컴포넌트: 경력 사항 표시
+      function WorkExperience() {
+        return (
+          <div>
+            <h3 className="section-title">#Work Experience</h3>
+            <p>
+              <strong>Zeroweb (2024.09 - 2025.02)</strong><br />
+              Web/Mobile Website Planning and Maintenance
+            </p>
+          </div>
+        );
+      }
+
+      // ActivityHistory 컴포넌트: 활동 이력 표시
+      function ActivityHistory() {
+        return (
+          <div>
+            <h3 className="section-title">#Activity History</h3>
+            <p>
+              <strong>
+                (LG) - LG Aimers 4th (2023.08 - 2024.03)<br />
+                (KITRI) - White Hat School 1st (2024.01 - 2024.02)
+              </strong>
+            </p>
+          </div>
+        );
+      }
+
+      // Container 컴포넌트: 각 섹션을 감싸는 공통 컨테이너
+      function Container({ children }) {
+        return <div className="container">{children}</div>;
+      }
+
+      // App 컴포넌트: 전체 페이지를 구성하는 메인 컴포넌트
+      function App() {
+        return (
+          <div>
+            <Container>
+              <Profile />
+              <hr />
+              <Links />
+              <Education />
+            </Container>
+            <Container>
+              <About />
+              <Skills />
+              <WorkExperience />
+              <ActivityHistory />
+            </Container>
+          </div>
+        );
+      }
+
+      // React 앱 렌더링
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+  </body>
+</html>
