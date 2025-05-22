@@ -456,7 +456,7 @@ export function useTodoNextId() {
 ## 출력결과
 
 <b>(기본 렌더링 모습)</b>
-<br><img src="img1.png" width="670" height="420" title="px(픽셀) 크기 설정" alt="1번 이미지"></img>
+<br><img src="1.png" width="400" height="550" title="px(픽셀) 크기 설정" alt="1번 이미지"></img>
 <br/>
 #### Explanation.
 - 오늘의 시간과 요일이 출력되고 아래에 해야 할 일의 갯수와 목록이 출력
@@ -464,7 +464,7 @@ export function useTodoNextId() {
 <br/>
 
 <b>(완료된 일 체크)</b>
-<br><img src="img2.png" width="620" height="600" title="px(픽셀) 크기 설정" alt="2번 이미지">
+<br><img src="2.png" width="400" height="150" title="px(픽셀) 크기 설정" alt="2번 이미지">
 </img>
 <br/>
 #### Explanation.
@@ -474,7 +474,7 @@ export function useTodoNextId() {
 <br/>
 
 <b>(할 일 삭제)</b>
-<br><img src="img03.png" width="620" height="600" title="px(픽셀) 크기 설정" alt="2번 이미지">
+<br><img src="3.png" width="400" height="150" title="px(픽셀) 크기 설정" alt="2번 이미지">
 </img>
 <br/>
 #### Explanation.
@@ -484,9 +484,9 @@ export function useTodoNextId() {
 <br/>
 
 <b>(할 일 추가)</b>
-<br><img src="img4.png" width="620" height="600" title="px(픽셀) 크기 설정" alt="2번 이미지">
-<br><img src="img5.png" width="620" height="600" title="px(픽셀) 크기 설정" alt="2번 이미지"></img>
-<br><img src="img6.png" width="620" height="600" title="px(픽셀) 크기 설정" alt="2번 이미지"></img>
+<br><img src="4.png" width="400" height="150" title="px(픽셀) 크기 설정" alt="2번 이미지">
+<br><img src="5.png" width="400" height="150" title="px(픽셀) 크기 설정" alt="2번 이미지"></img>
+<br><img src="6.png" width="400" height="570" title="px(픽셀) 크기 설정" alt="2번 이미지"></img>
 </img>
 <br/>
 #### Explanation.
